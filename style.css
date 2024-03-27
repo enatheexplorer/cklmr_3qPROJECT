@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Orbitron:wght@400..900&family=Press+Start+2P&display=swap');
 
 body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+p, span{
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
 }
 
 header{
@@ -41,7 +47,7 @@ header{
     left:45%;
     transform:translate( -50%, -50%) scale(0);
     background:#fff;
-    width: 450px;
+    width: 500px;
     height:300px;
     z-index: 2;
     text-align:center;
@@ -126,6 +132,11 @@ section{
     height: 66vh;
 }
 
+section img{
+    width: 3vw;
+}
+
+
 article{
     background-color: #ADD8E6;
     border: 5px solid #6091b9;
@@ -135,6 +146,16 @@ article{
     padding-left: 2vw;
     padding-right: 2vw;
 }
+
+#healthStatus div{
+    display: flex;
+    align-items: center;
+}
+
+#healthStatus p{
+    margin-left: 10px;
+}
+
 
 #healthStatus{
     display: flex;
@@ -186,7 +207,7 @@ footer span{
     color: #666666;
 }
 
-img{
+footer img{
     margin-left: 10px;
     width: 5vw;
 }

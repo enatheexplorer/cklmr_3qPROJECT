@@ -29,7 +29,7 @@ function checkHealth(playerHealth, opponentHealth){
 function resetGame(){
     document.getElementById("playHealth").innerHTML = 100;
     document.getElementById("oppHealth").innerHTML = 100;
-    document.getElementById("showStat").innerHTML = "";
+    document.getElementById("showStat").innerHTML = "Loading...";
     disableAD();
     coinButton.disabled = false;
     coinButton.style.color = "white";
