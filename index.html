@@ -10,80 +10,80 @@
 
 </head>
 <body>
-    <header>
+    <header> <!--Header-->
         CEEKAYLAMAR FIGHT SIMULATOR
     </header>
-    <main>
-        <aside id="resetBox1">
-            <button class="resetButton" id="resetButton1" onclick="resetGame()">
-                <div>R</div>
-                <div>E</div>
-                <div>S</div>
-                <div>E</div>
-                <div>T</div>
+    <main> <!--Main content-->
+        <aside id="resetBox1"> <!--Reset button 1st container-->
+            <button class="resetButton" id="resetButton1" onclick="resetGame()"> <!--Button to reset the game-->
+                <div>R</div> <!--"R"-->
+                <div>E</div> <!--"E"-->
+                <div>S</div> <!--"S"-->
+                <div>E</div> <!--"E"-->
+                <div>T</div> <!--"T"-->
             </button>
         </aside>
-        <section>
-            <video id="bgvid" autoplay muted loop playsinline>
-                <source src="vid.mp4" type="video/mp4">
+        <section> <!--Gameplay section-->
+            <video id="bgvid" autoplay muted loop playsinline> <!--Video background-->
+                <source src="vid.mp4" type="video/mp4"> <!--Video background source-->
             </video>
-            <article id="healthStatus">
-                <div>
-                    <img src="lives.png" alt="">
-                    <img src="lives.png" alt="">
-                    <p id="healthStat1">Player Life: <span id="playHealth">100</span></p>
+            <article id="healthStatus"><!--Health status-->
+                <div> <!--Div for player health status-->
+                    <img src="lives.png" alt=""> <!--Health icon 1-->
+                    <img src="lives.png" alt=""> <!--Health icon 2-->
+                    <p id="healthStat1">Player Life: <span id="playHealth">100</span></p> <!--Outputs player health status-->
                 </div>
-                <div>
-                    <img src="lives.png" alt="">
-                    <img src="lives.png" alt="">
-                    <p id="healthStat2">Opponent Life: <span id="oppHealth">100</span></p>
+                <div> <!--Div for opponent health status-->
+                    <img src="lives.png" alt=""> <!--Health icon 1-->
+                    <img src="lives.png" alt=""> <!--Health icon 2-->
+                    <p id="healthStat2">Opponent Life: <span id="oppHealth">100</span></p> <!--Outputs the opponent's health status-->
                 </div>
             </article>
-            <article id="commentary">
-                <p id="showStat">Loading...</p>
+            <article id="commentary"> <!--Gameplay commentary-->
+                <p id="showStat">Loading...</p> <!--Display game status messages-->
             </article>
         </section>
-        <aside id="resetBox2">
-            <button class="resetButton" id="resetButton2" onclick="resetGame()">
-                <div>R</div>
-                <div>E</div>
-                <div>S</div>
-                <div>E</div>
-                <div>T</div>
+        <aside id="resetBox2"> <!--Reset button 2nd container-->
+            <button class="resetButton" id="resetButton2" onclick="resetGame()"> <!--Individual letters forming "RESET"-->
+                <div>R</div> <!--"R"-->
+                <div>E</div> <!--"E"-->
+                <div>S</div> <!--"S"-->
+                <div>E</div> <!--"E"-->
+                <div>T</div> <!--"T"-->
             </button>
         </aside>
     </main>
-    <footer>
-        <div>
-            <button id="attackbtn" onclick="playerAttack()" disabled="true">
-                <span>Attack!</span>
-                <img src="attack.png" alt="">
+    <footer> <!--Footer-->
+        <div> <!--Div for attack button-->
+            <button id="attackbtn" onclick="playerAttack()" disabled="true"> <!--Button to initate player attack-->
+                <span>Attack!</span> 
+                <img src="attack.png" alt=""> <!--Attack icon-->
             </button>
         </div>
-        <div id="coin">
-            <div class="popup" id="popup-1">
-                <div class="overlay"></div>
-                <div class="content">
-                    <button class="close-btn" onclick="closePopup()">&times;</button>
-                    <h1>Toss a Coin</h1> 
-                    <p style="font-weight: bold;">Please select head or tails.</p>
-                    <p>(Please use the exit button to close this pop-up)</p>
-                    <form id="coinToss" onsubmit="tossCoin()">
-                        <select id="tossCoin" name="coinToss">
-                            <option value="Head">Head</option>
-                            <option value="Tail">Tail</option>
+        <div id="coin"> <!--Div for coin toss-->
+            <div class="popup" id="popup-1"> <!--Div for coin toss popup-->
+                <div class="overlay"></div> <!--Div for coin toss popup overlay-->
+                <div class="content"> <!--Div for popup content-->
+                    <button class="close-btn" onclick="closePopup()">&times;</button> <!--Close button for popup-->
+                    <h1>Toss a Coin</h1> <!--Title of Coin toss-->
+                    <p style="font-weight: bold;">Please select head or tails.</p> <!--Instructions for coin toss-->
+                    <p>(Please use the exit button to close this pop-up)</p> <!--Additional instructions for popup-->
+                    <form id="coinToss" onsubmit="tossCoin()"> <!--Form for coin toss-->
+                        <select id="tossCoin" name="coinToss"> <!--Select options for coin toss-->  
+                            <option value="Head">Head</option> <!--Head option-->
+                            <option value="Tail">Tail</option> <!--Tail option--->
                         </select>
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit"> <!--Submit button-->
                     </form>
-                    <p id="coinOutput"></p>
+                    <p id="coinOutput"></p> <!--Outputs coin toss results-->
                 </div>
-                <button onclick="togglePopup()" id="coinButton">Toss a Coin!</button>
+                <button onclick="togglePopup()" id="coinButton">Toss a Coin!</button> <!--Button to toggle coin toss popup-->
             </div>
         </div>
-        <div>
-            <button id="defendbtn" onclick="playerDefend()" disabled="true">
+        <div> <!--Div for defend button-->
+            <button id="defendbtn" onclick="playerDefend()" disabled="true"> <!--Button to initiate player defense-->
                 <span>Defend!</span>
-                <img src="shield.png" alt="">
+                <img src="shield.png" alt=""> <!--Defense icon-->
             </button>
         </div>
     </footer>
