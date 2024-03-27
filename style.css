@@ -1,85 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Orbitron:wght@400..900&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Press+Start+2P&display=swap'); /* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Orbitron:wght@400..900&family=Press+Start+2P&display=swap'); /* Importing Google Fonts */
 
-body{
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
+body{ /* Styling for the body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: hidden; /* Hide vertical overflow */
 }
 
-p, span{
-    font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
+p, span{ /* Styling for paragraphs and spans */
+    font-family: "Orbitron", sans-serif; /* Set font family */
+    font-optical-sizing: auto; /* Set font optical sizing */
 }
 
-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: red;
-    padding: 1vw;
-    height: 11vh;
-    background-image: linear-gradient(to bottom right, #FF00FF, #00FFFF, #FF1493);
-    font-family: "Press Start 2P", system-ui;
-    font-weight: bold;
-    font-size: 3.5vw;
-    color: #00CCFF;
-    -webkit-text-stroke: 1px white;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 50);
+header{ /* Styling for the header */
+    display: flex; /* Display as flex container */
+    flex-direction: column; /* Set flex direction to column */
+    align-items: center; /* Align items to center */
+    justify-content: center; /* Justify content to center */
+    background-color: red; /* Set background color */
+    padding: 1vw; /* Set padding */
+    height: 11vh; /* Set height */
+    background-image: linear-gradient(to bottom right, #FF00FF, #00FFFF, #FF1493); /* Set background image */
+    font-family: "Press Start 2P", system-ui; /* Set font family */
+    font-weight: bold; /* Set font weight */
+    font-size: 3.5vw; /* Set font size */
+    color: #00CCFF; /* Set text color */
+    -webkit-text-stroke: 1px white; /* Set text stroke */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 50); /* Set text shadow */
 }
 
-.popup .overlay {
-    position: fixed;
-    top:0px;
-    left:0px;
-    width:100vw;
-    height:100vh;
-    background:rgba(0,0,0,0.7);
-    z-index: 1;
-    display: none;
+.popup .overlay { /* Styling for popup overlay */
+    position: fixed; /* Set position to fixed */
+    top:0px; /* Set top position */
+    left:0px; /* Set left position */
+    width:100vw; /* Set width to full viewport width */
+    height:100vh; /* Set height to full viewport height */
+    background:rgba(0,0,0,0.7); /* Set background color */
+    z-index: 1; /* Set z-index */
+    display: none; /* Hide by default */
 }
 
-.popup .content {
-    position:absolute;
-    top:-150%;
-    left:45%;
-    transform:translate( -50%, -50%) scale(0);
-    background:#fff;
-    width: 500px;
-    height:300px;
-    z-index: 2;
-    text-align:center;
-    padding:20px;
-    box-sizing:border-box;
+.popup .content { /* Styling for popup content */
+    position:absolute; /* Set position to absolute */
+    top:-150%; /* Set top position */
+    left:45%; /* Set left position */
+    transform:translate( -50%, -50%) scale(0); /* Set initial transform */
+    background:#fff; /* Set background color */
+    width: 500px; /* Set width */
+    height:300px; /* Set height */
+    z-index: 2; /* Set z-index */
+    text-align:center; /* Set text alignment */
+    padding:20px; /* Set padding */
+    box-sizing:border-box; /* Set box sizing */
 }
 
-.popup .close-btn {
-    cursor: pointer;
-    position:absolute;
-    right:20px;
-    top: 20px;
-    width: 30px;
-    height:30px;
-    background:#222;
-    color:#fff;
-    font-size:25px;
-    font-weight: 600;
-    line-height:30px;
-    text-align:center;
-    border-radius:50%;
+.popup .close-btn { /* Styling for close button */
+    cursor: pointer; /* Set cursor to pointer */
+    position:absolute; /* Set position to absolute */
+    right:20px; /* Set right position */
+    top: 20px; /* Set top position */
+    width: 30px; /* Set width */
+    height:30px; /* Set height */
+    background:#222; /* Set background color */
+    color:#fff; /* Set text color */
+    font-size:25px; /* Set font size */
+    font-weight: 600; /* Set font weight */
+    line-height:30px; /* Set line height */
+    text-align:center; /* Set text alignment */
+    border-radius:50%; /* Set border radius */
 }
 
-.popup.active .overlay { 
-    display:block;
+.popup.active .overlay {  /* Styling for active popup overlay */
+    display:block; /* Display block */
 }
 
-.popup.active .content {
-    transition:all 300ms ease-in-out; 
-    transform:translate( -50%, -50%) scale(1);
+.popup.active .content { /* Styling for active popup content */
+    transition:all 300ms ease-in-out; /* Set transition */
+    transform:translate( -50%, -50%) scale(1); /* Set transform */
 }
 
+<!-- Styling for the coin toss button -->
 #coinButton {
     background-color: #cfe831;
     color:#331744;
@@ -89,14 +90,17 @@ header{
     text-align: center;
 }
 
+<!-- Hover effect for the coin toss button -->
 #coinButton:hover{
     background-color: #afc426;
 }
 
+<!-- Active effect for the coin toss button -->
 #coinButton:active{
     background-color: #e4f28d;
 }
 
+<!-- Styling for the coin toss output -->
 #coinOutput{
     font-size: 20px;
     font-weight: bold;
@@ -104,6 +108,7 @@ header{
     color: rgb(109, 50, 50);
 }
 
+<!-- Styling for main section -->
 main{
     width: 100vw;
     height: 85vh;
@@ -111,6 +116,7 @@ main{
     flex-direction: row;
 }
 
+<!-- Styling for sidebar -->
 aside{
     background-color: #3545b5;
     float: left;
@@ -121,6 +127,7 @@ aside{
     justify-content: center;
 }
 
+<!-- Styling for reset button -->
 .resetButton{
     font-size: 5vw;
     font-weight: bold;
@@ -133,17 +140,19 @@ aside{
     margin-top: 8px;
 }
 
+<!-- Styling for main section content -->
 section{
     float: right;
     width: 85vw;
     height: 66vh;
 }
 
+<!-- Styling for images within the main section -->
 section img{
     width: 3vw;
 }
 
-
+<!-- Styling for articles within the main section -->
 article{
     background-color: #ADD8E6;
     border: 5px solid #6091b9;
@@ -154,90 +163,97 @@ article{
     padding-right: 2vw;
 }
 
+/* Styles for displaying health status */
 #healthStatus div{
-    display: flex;
-    align-items: center;
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Align items vertically */
 }
 
 #healthStatus p{
-    margin-left: 10px;
+    margin-left: 10px; /* Add margin for spacing */
 }
 
 
 #healthStatus{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10.5vh;
-    font-weight: bold;
-    font-size: 1.5vw;
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space evenly between elements */
+    align-items: center; /* Align items vertically */
+    height: 10.5vh; /* Set height */
+    font-weight: bold; /* Bold font */
+    font-size: 1.5vw; /* Set font size */
 }
 
+/* Styles for displaying game commentary */
 #commentary{
-    height: 40vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 4vw;
+    height: 40vh; /* Set height */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    font-size: 4vw; /* Set font size */
 }
 
 
+/* Styles for footer */
 footer{
-    position: absolute;
-    left: 7.8vw;
-    bottom:0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #3375f3;
-    padding: 1vw;
-    height: 15vh;
-    width: 82.3vw;
+    position: absolute; /* Position at the bottom */
+    left: 7.8vw; /* Align left */
+    bottom:0; /* Stick to the bottom */
+    display: flex; /* Flexbox for layout */
+    flex-direction: row; /* Stack items horizontally */
+    align-items: center; /* Align items vertically */
+    justify-content: space-evenly; /* Space items evenly */
+    background-color: #3375f3; /* Background color */
+    padding: 1vw; /* Add padding */
+    height: 15vh; /* Set height */
+    width: 82.3vw; /* Set width */
 }
 
 footer span{
-    font-size: 3vw;
+    font-size: 3vw; /* Set font size */
 }
 
+/* Styles for attack and defend buttons */
 #attackbtn, #defendbtn{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25%;
-    padding: 1vw;
-    border: outset #6091b9 0.5vh;
-    background-color: #A9A9A9;
-    color: #666666;
+    display: flex; /* Flexbox for layout */
+    flex-direction: row; /* Stack items horizontally */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center items horizontally */
+    border-radius: 25%; /* Rounded corners */
+    padding: 1vw; /* Add padding */
+    border: outset #6091b9 0.5vh; /* Add border */
+    background-color: #A9A9A9; /* Background color */
+    color: #666666; /* Text color */
 }
 
 footer img{
-    margin-left: 10px;
-    width: 5vw;
+    margin-left: 10px; /* Add margin */
+    width: 5vw; /* Set width */
 }
 
+/* Background video styling */
 #bgvid{
-    width: 100vw;
-    object-fit: contain;
-    position: absolute;
-    z-index: -2;
+    width: 100vw; /* Set width */
+    object-fit: contain; /* Ensure video fits container */
+    position: absolute; /* Position absolutely */
+    z-index: -2; /* Place behind other elements */
 }
 
+/* Coin animation styling */
 #coinButton{
-    z-index: 7;
-    animation-name: bgTRANS;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-out;
+    z-index: 7; /* Set z-index */
+    animation-name: bgTRANS; /* Set animation name */
+    animation-duration: 4s; /* Set animation duration */
+    animation-iteration-count: infinite; /* Infinite animation */
+    animation-timing-function: ease-out; /* Set animation timing */
 }
 
+/* Background transition animation */
 @keyframes bgTRANS{
-    0%{transform: scale(1, 1);}
-    50%{transform: scale(1.25, 1.25);}
-    100%{transform: scale(1, 1);}
+    0%{transform: scale(1, 1);} /* Initial scale */
+    50%{transform: scale(1.25, 1.25);} /* Scale up */
+    100%{transform: scale(1, 1);} /* Return to normal scale */
 }
 
 
