@@ -33,6 +33,8 @@ function resetGame(){
     document.getElementById("oppHealth").innerHTML = 100;
     document.getElementById("showStat").innerHTML = "Loading...";
     disableAD();
+    resetButton1.style.color = "#657423";
+    resetButton2.style.color = "#657423";
     coinButton.disabled = false;
     coinButton.style.color = "white";
     coinButton.style.background = "#04AA6D";
@@ -219,9 +221,9 @@ function resetDisable(){
 function resetEnable(){
     document.getElementById("resetButton1").disabled = false;
     document.getElementById("resetButton2").disabled = false;
-    resetButton1.style.color = "#657423";
+    resetButton1.style.color = "black";
     resetButton1.style.background = "#DBFF3C";
-    resetButton2.style.color = "#657423";
+    resetButton2.style.color = "black";
     resetButton2.style.background = "#DBFF3C";
     return false;
 }
