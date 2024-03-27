@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <header>
+        CEEKAYLAMAR FIGHT SIMULATOR
+    </header>
+    <main>
+        <section>
+            <video id="bgvid" autoplay muted loop playsinline>
+                <source src="vid.mp4" type="video/mp4">
+            </video>
+            <article id="healthStatus">
+                <div>
+                    <p id="healthStat1">Player Life: <span id="playHealth">100</span></p>
+                </div>
+                <div>
+                    <p id="healthStat2">Opponent Life: <span id="oppHealth">100</span></p>
+                </div>
+            </article>
+            <article id="commentary">
+                <p id="showStat"></p>
+            </article>
+        </section>
+        <aside>
+            <button id="resetButton" onclick="resetGame()">
+                <div>R</div>
+                <div>E</div>
+                <div>S</div>
+                <div>E</div>
+                <div>T</div>
+            </button>
+        </aside>
+    </main>
+    <footer>
+        <div>
+            <button id="attackbtn" onclick="playerAttack()" disabled="true">
+                <span>Attack!</span>
+                <img src="attack.png" alt="">
+            </button>
+        </div>
+        <div id="coin">
+            <div class="popup" id="popup-1">
+                <div class="overlay"></div>
+                <div class="content">
+                    <button class="close-btn" onclick="closePopup()">&times;</button>
+                    <h1>Toss a Coin</h1> 
+                    <p style="font-weight: bold;">Please select head or tails.</p>
+                    <p>(Please use the exit button to close this pop-up)</p>
+                    <form id="coinToss" onsubmit="tossCoin()">
+                        <select id="tossCoin" name="coinToss">
+                            <option value="Head">Head</option>
+                            <option value="Tail">Tail</option>
+                        </select>
+                        <input type="submit" value="Submit">
+                    </form>
+                    <p id="coinOutput"></p>
+                </div>
+                <button onclick="togglePopup()" id="coinButton">Toss a Coin!</button>
+            </div>
+        </div>
+        <div>
+            <button id="defendbtn" onclick="playerDefend()" disabled="true">
+                <span>Defend!</span>
+                <img src="shield.png" alt="">
+            </button>
+        </div>
+    </footer>
+   
+</body>
+</html>
