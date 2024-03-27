@@ -24,7 +24,7 @@ header{ /* Styling for the header */
     background-image: linear-gradient(to bottom right, #FF00FF, #00FFFF, #FF1493); /* Set background image */
     font-family: "Press Start 2P", system-ui; /* Set font family */
     font-weight: bold; /* Set font weight */
-    font-size: 3.5vw; /* Set font size */
+    font-size: 3.25vw; /* Set font size */
     color: #00CCFF; /* Set text color */
     -webkit-text-stroke: 1px white; /* Set text stroke */
     text-shadow: 0 0 20px rgba(255, 255, 255, 50); /* Set text shadow */
