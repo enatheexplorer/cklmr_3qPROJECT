@@ -104,6 +104,13 @@ header{
     color: rgb(109, 50, 50);
 }
 
+main{
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+}
+
 aside{
     background-color: #3545b5;
     float: left;
@@ -114,7 +121,7 @@ aside{
     justify-content: center;
 }
 
-#resetButton{
+.resetButton{
     font-size: 5vw;
     font-weight: bold;
     padding: 1vw;
@@ -122,13 +129,13 @@ aside{
     color: #657423;
 }
 
-#resetButton div{
+.resetButton div{
     margin-top: 8px;
 }
 
 section{
     float: right;
-    width: 92vw;
+    width: 85vw;
     height: 66vh;
 }
 
@@ -179,7 +186,7 @@ article{
 
 footer{
     position: absolute;
-    right: 0;
+    left: 7.8vw;
     bottom:0;
     display: flex;
     flex-direction: row;
@@ -188,7 +195,7 @@ footer{
     background-color: #3375f3;
     padding: 1vw;
     height: 15vh;
-    width: 90vw;
+    width: 82.3vw;
 }
 
 footer span{

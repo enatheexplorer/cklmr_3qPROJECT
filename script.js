@@ -4,6 +4,7 @@ function healthStatus(damage1, damage2){
     playerHealth -= damage1;
     opponentHealth -= damage2;
     checkHealth(playerHealth, opponentHealth);
+    return false;
 }
 
 function checkHealth(playerHealth, opponentHealth){
@@ -24,6 +25,7 @@ function checkHealth(playerHealth, opponentHealth){
         document.getElementById("playHealth").innerHTML = playerHealth;
         document.getElementById("oppHealth").innerHTML = opponentHealth;
     }
+    return false;
 }
 
 function resetGame(){
@@ -37,6 +39,7 @@ function resetGame(){
     document.getElementById("coinOutput").innerHTML = ""; 
     document.getElementById("healthStat1").style.color = "black";
     document.getElementById("healthStat2").style.color = "black";
+    return false;
 }
 
 
@@ -47,6 +50,7 @@ function disableAD(){
     attackbtn.style.background = "#A9A9A9";
     defendbtn.style.color = "#666666";
     defendbtn.style.background = "#A9A9A9";
+    return false;
 }
 
 function enableAD(){
@@ -56,6 +60,7 @@ function enableAD(){
     attackbtn.style.background = "#bd0f16";
     defendbtn.style.color = "#D6FF20";
     defendbtn.style.background = "#bd0f16";
+    return false;
 }
 
 function playerAttack(){
@@ -90,6 +95,8 @@ function playerAttack(){
     }
 
     enableAD();
+
+    return false;
 }
 
 function playerDefend(){
@@ -142,21 +149,20 @@ function opponentAction(){
 
 function togglePopup(){
     document.getElementById("popup-1").classList.toggle("active");
-    document.getElementById("resetButton").disabled = true;
-    resetButton.style.color = "#666666";
-    resetButton.style.background = "#A9A9A9";
+    resetDisable();
     disableAD();
+    return false;
 }
 
 function closePopup(){
     document.getElementById("popup-1").classList.remove("active");
-    document.getElementById("resetButton").disabled = false;
-    resetButton.style.color = "#657423";
-    resetButton.style.background = "#DBFF3C";
+    resetEnable();
     coinButton.disabled = true;
     coinButton.style.color = "#666666";
     coinButton.style.background = "#A9A9A9";
+    return false;
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
     var form = document.getElementById("coinToss");
@@ -196,9 +202,26 @@ function tossCoin() {
     else{
         document.getElementById("coinOutput").innerHTML = "Game is malfunctioning!"; 
     }
-    document.getElementById("resetButton").disabled = false;
-    resetButton.style.color = "#657423";
-    resetButton.style.background = "#DBFF3C";
+    resetEnable();
     return false;
 }
 
+function resetDisable(){
+    document.getElementById("resetButton1").disabled = true;
+    document.getElementById("resetButton2").disabled = true;
+    resetButton1.style.color = "#666666";
+    resetButton1.style.background = "#A9A9A9";
+    resetButton2.style.color = "#666666";
+    resetButton2.style.background = "#A9A9A9";
+    return false;
+}
+
+function resetEnable(){
+    document.getElementById("resetButton1").disabled = false;
+    document.getElementById("resetButton2").disabled = false;
+    resetButton1.style.color = "#657423";
+    resetButton1.style.background = "#DBFF3C";
+    resetButton2.style.color = "#657423";
+    resetButton2.style.background = "#DBFF3C";
+    return false;
+}
