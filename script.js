@@ -31,7 +31,7 @@ function checkHealth(playerHealth, opponentHealth){
 }
 
 // Function to reset the game
-function resetGame(){
+function resetBtn(){
     document.getElementById("playHealth").innerHTML = 100; // Reset player's health to 100
     document.getElementById("oppHealth").innerHTML = 100; // Reset opponent's health to 100
     document.getElementById("showStat").innerHTML = "Loading..."; // Display loading message
