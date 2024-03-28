@@ -215,7 +215,7 @@ function tossCoin() {
         enableAD();
     }
     else{
-        // If something went wrong, display an error message
+        // If something went wrong, this displays an error message
         document.getElementById("coinOutput").innerHTML = "Game is malfunctioning!"; 
     }
     resetEnable(); // Enable the reset button
